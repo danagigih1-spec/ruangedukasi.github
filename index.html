@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruang Edukasi– Game Edukasi Anak SD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen font-[Poppins,sans-serif] bg-cover bg-center"
+      style="background-image: url('assets/bg.svg');">
+  <!-- Header -->
+  <header class="flex flex-wrap justify-between items-center px-4 sm:px-8 py-4 bg-sky-500 text-white shadow-lg rounded-b-3xl">
+    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-wide drop-shadow-md mb-2 sm:mb-0 w-full sm:w-auto text-center sm:text-left">
+      🎈 Ruang Edukasi
+    </h1>
+
+    <nav class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-3 w-full sm:w-auto">
+      <a href="registrasi_siswa.html" class="bg-white text-sky-600 px-4 py-2 rounded-full font-semibold shadow hover:bg-sky-100 transition text-sm sm:text-base">Registrasi</a>
+      <a href="login_guru.html" class="bg-yellow-400 px-4 py-2 rounded-full font-semibold shadow hover:bg-yellow-300 transition text-sm sm:text-base">Login Guru</button>"           
+      <a href="login_siswa.html" class="bg-green-400 px-4 py-2 rounded-full font-semibold shadow hover:bg-green-300 transition text-sm sm:text-base">Login Siswa</a>
+      <button onclick="logout()" class="bg-red-400 text-white px-4 py-2 rounded-full hover:bg-red-500">Logout</button>
+    </nav>
+<script>
+function logout() {
+  localStorage.removeItem("loginSiswa");
+  alert("Kamu telah logout. Sampai jumpa lagi!");
+  window.location.href = "index.html";
+}
+</script>
+
+  </header>
+
+  <!-- Body -->
+  <main class="px-4 sm:px-6 py-10 flex flex-col items-center text-gray-800">
+
+    <!-- Intro -->
+    <section class="text-center mb-10 px-2">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-sky-700 mb-4 drop-shadow-sm">
+        Selamat Datang di <span class="text-pink-500">Ruang Edukasi!</span>
+      </h2>
+      <p class="text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Yuk, belajar sambil bermain dengan cara yang menyenangkan 🎮  
+        Didesain untuk anak usia <strong>6–9 tahun</strong> agar belajar terasa seperti petualangan seru!
+      </p>
+    </section>
+
+    <!-- Menu Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mb-20 w-full px-4">
+      <a href="materi.html" class="group bg-gradient-to-br from-sky-300 to-sky-500 text-white rounded-3xl p-6 sm:p-8 shadow-xl hover:scale-105 transition duration-300 float">
+        <div class="text-center">
+          <div class="text-5xl sm:text-6xl mb-3">📘</div>
+          <h3 class="text-xl sm:text-2xl font-bold mb-2">Materi</h3>
+          <p class="text-white/90 group-hover:text-white text-sm sm:text-base">Belajar Membaca Itu Menyenangkan!</p>
+        </div>
+      </a>
+
+      <a href="tujuan.html" class="group bg-gradient-to-br from-yellow-300 to-amber-500 text-white rounded-3xl p-6 sm:p-8 shadow-xl hover:scale-105 transition duration-300 float">
+        <div class="text-center">
+          <div class="text-5xl sm:text-6xl mb-3">🎯</div>
+          <h3 class="text-xl sm:text-2xl font-bold mb-2">Tujuan</h3>
+          <p class="text-white/90 group-hover:text-white text-sm sm:text-base">Lihat apa yang akan kamu pelajari!</p>
+        </div>
+      </a>
+
+      <a href="evaluasi.html" class="group bg-gradient-to-br from-green-300 to-green-500 text-white rounded-3xl p-6 sm:p-8 shadow-xl hover:scale-105 transition duration-300 float">
+        <div class="text-center">
+          <div class="text-5xl sm:text-6xl mb-3">📊</div>
+          <h3 class="text-xl sm:text-2xl font-bold mb-2">Evaluasi</h3>
+          <p class="text-white/90 group-hover:text-white text-sm sm:text-base">Uji kemampuanmu & kumpulkan bintang ⭐</p>
+        </div>
+      </a>
+    </section>
+
+    <!-- Tentang -->
+    <section class="max-w-4xl bg-white rounded-3xl shadow-lg p-6 sm:p-10 text-center border-4 border-sky-200 mb-16">
+      <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-4">🌟 Tentang Ruang Edukasi</h2>
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+        <strong>Ruang Edukasi</strong> dibuat untuk menjadikan kegiatan belajar siswa lebih menarik, interaktif, dan menyenangkan. Kami membantu siswa belajar teknik dasar <em>membaca</em> dan <em>menulis</em>,
+         serta mengenal dunia sekitar melalui permainan edukasi penuh warna
+      </p>
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+        Tujuan kami: <strong>menumbuhkan semangat belajar sejak dini</strong> melalui teknologi yang aman & positif,
+        serta membantu guru & orang tua memantau perkembangan anak.
+      </p>
+    </section>
+
+<!-- Tutor Section -->
+<section class="max-w-6xl text-center mb-16 px-2">
+  <h2 class="text-2xl sm:text-3xl font-extrabold text-pink-500 mb-8">👩‍🏫 Para Tutor Hebat Kami</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+
+    <!-- Tutor 1 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-sky-100">
+      <img src="assets/img/fani.jpg" alt="Tutor 1" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-sky-600 mb-2">Miss Fani</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">turor Level 1</p>
+      <p class="text-sm sm:text-base text-gray-700">“Bahasa Indonesia adalah jendela dunia dan hati; melalui kata-kata kita dapat memahami budaya, mengekspresikan perasaan, dan menghubungkan generasi.”</p>
+    </div>
+
+    <!-- Tutor 2 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-pink-100">
+      <img src="assets/img/nur.jpg" alt="Tutor 2" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-pink-500 mb-2">Miss Nur</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 2</p>
+      <p class="text-sm sm:text-base text-gray-700">“Membaca, menulis, dan berbicara bukan sekadar keterampilan, tetapi kunci untuk membangun masa depan yang cerdas dan kreatif.”</p>
+    </div>
+
+    <!-- Tutor 3 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-green-100">
+      <img src="assets/img/irma.jpg" alt="Tutor 3" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-green-500 mb-2">Miss Irma</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 3</p>
+      <p class="text-sm sm:text-base text-gray-700">“Setiap kata yang kita ucapkan atau tulis memiliki kekuatan; mari ajarkan siswa menggunakan bahasa dengan bijak dan penuh makna.”</p>
+    </div>
+
+    <!-- Tutor 4 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-purple-100">
+      <img src="assets/img/emil.jpg" alt="Tutor 4" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-purple-500 mb-2">Miss Emil</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 1</p>
+      <p class="text-sm sm:text-base text-gray-700">“Seorang guru Bahasa Indonesia bukan hanya mengajar tata bahasa, tetapi membuka wawasan dan membimbing generasi menjadi penulis masa depan.”</p>
+    </div>
+
+    <!-- Tutor 5 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-orange-100">
+      <img src="assets/img/mawa.jpg" alt="Tutor 5" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-orange-500 mb-2">Miss Mawa</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 2</p>
+      <p class="text-sm sm:text-base text-gray-700">“Bahasa Indonesia adalah jembatan kebangsaan; melalui penguasaan bahasa, kita memperkuat persatuan dan memahami identitas bangsa.”</p>
+    </div>
+
+    <!-- Tutor 6 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-teal-100">
+      <img src="assets/img/mila.jpg" alt="Tutor 6" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-teal-500 mb-2">Miss Mila</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 3</p>
+      <p class="text-sm sm:text-base text-gray-700">“Menulis untuk menginspirasi, membaca untuk memahami, dan berbicara untuk menyampaikan ide dengan jelas adalah perjalanan setiap pembelajar bahasa.”</p>
+    </div>
+
+    <!-- Tutor 7 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-purple-100">
+      <img src="assets/img/royhana.jpg" alt="Tutor 4" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-purple-500 mb-2">Miss Royhana</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 1</p>
+      <p class="text-sm sm:text-base text-gray-700">“Berbahasa baik adalah cerminan berpikir cerdas dan bertindak bijaksana; guru Bahasa Indonesia menanamkan nilai itu dalam setiap pembelajaran.”</p>
+    </div>
+
+    <!-- Tutor 8 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-orange-100">
+      <img src="assets/img/oktavia.jpg" alt="Tutor 5" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-orange-500 mb-2">Miss Oktavia</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 2</p>
+      <p class="text-sm sm:text-base text-gray-700">“Menguasai kata berarti menguasai dunia; melalui penguasaan bahasa, siswa mampu mengekspresikan ide, berkomunikasi efektif, dan berkarya.”</p>
+    </div>
+
+    <!-- Tutor 9 -->
+    <div class="bg-white rounded-3xl shadow-lg p-6 hover:scale-105 transition border-4 border-teal-100">
+      <img src="assets/img/syarif.jpg" alt="Tutor 6" class="w-28 sm:w-32 h-28 sm:h-32 mx-auto rounded-full mb-4 object-cover shadow-md">
+      <h3 class="text-lg sm:text-xl font-bold text-teal-500 mb-2">Miss Syarif</h3>
+      <p class="text-gray-600 text-sm sm:text-base mb-3">Tutor Level 3</p>
+      <p class="text-sm sm:text-base text-gray-700">“Mengajar Bahasa Indonesia adalah menanam kecerdasan, karakter, dan kreativitas; setiap pelajaran adalah investasi untuk masa depan bangsa.”</p>
+    </div>
+
+  </div>
+
+  <!-- Visi Misi -->
+  <div class="mt-10 sm:mt-12 bg-gradient-to-r from-sky-200 to-pink-100 p-6 sm:p-8 rounded-3xl shadow-md text-sm sm:text-base">
+    <h3 class="text-2xl font-bold text-sky-700 mb-4">🎯 Visi & Misi Para Tutor</h3>
+    <p class="text-gray-700 leading-relaxed mb-2"><strong>Visi:</strong> Meningkatkan kemampuan dasar membaca dan menulis siswa melalui pemanfaatan media dan teknologi yang interaktif melalui <strong>Ruang Edukasi</strong></p>
+    <p class="text-gray-700 leading-relaxed"><strong>Misi:</strong> <p>1. Menyediakan materi pembelajaran dasar yang mudah dipahami dan sesuai tingkat perkembangan siswa.</p>
+<p>2. Menciptakan pengalaman belajar yang menarik dan menyenangkan, sehingga siswa termotivasi untuk terus belajar.</p>
+<p>3. Melatih kemampuan berpikir kritis, kreatif, dan pemecahan masalah melalui contoh dan latihan yang tepat.</p>
+<p>4. Membantu guru dan orang tua memantau perkembangan siswa</p>
+  </div>
+</section>
+
+    <!-- Kolom Komentar -->
+    <section class="max-w-4xl bg-white rounded-3xl shadow-lg p-6 sm:p-10 text-center border-4 border-yellow-200 mb-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-amber-500 mb-4">💬 Kolom Komentar</h2>
+      <p class="text-base sm:text-lg text-gray-700 mb-6">Punya ide atau saran untuk BelajarSeru? Tulis komentarmu di bawah ini!</p>
+
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Nama kamu..." class="w-full border border-gray-300 rounded-full px-4 sm:px-5 py-3 focus:ring-2 focus:ring-sky-300 outline-none text-sm sm:text-base" required>
+        <textarea placeholder="Tulis komentar kamu di sini..." rows="4" class="w-full border border-gray-300 rounded-3xl px-4 sm:px-5 py-3 focus:ring-2 focus:ring-sky-300 outline-none text-sm sm:text-base" required></textarea>
+        <button type="submit" class="bg-sky-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-600 transition text-sm sm:text-base">Kirim Komentar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-600 mt-10 bg-gradient-to-t from-sky-200 to-transparent rounded-t-3xl text-sm sm:text-base">
+    © 2025 <span class="font-semibold text-sky-700">Ruang Edukasi</span> — Belajar Menjadi Petualangan Seru! 🚀
+  </footer>
+
+</body>
+</html>
